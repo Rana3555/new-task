@@ -1,0 +1,65 @@
+
+<form [formGroup]="EmployeeForm" (ngSubmit)="onSubmit(EmployeeForm)">
+<div class="container">
+  <h2 class="text-center">Create Employee</h2>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Employee NO.</label>
+    <input type="email" class="form-control" formControlName="ID" placeholder="Employee no">
+    <div class="error-msg" *ngIf="EmployeeForm.get('ID')?.hasError('required') && EmployeeForm.get('ID')?.touched">
+      Employee Id is required </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Name:</label>
+    <input type="email" class="form-control" formControlName="NAME" placeholder="Name">
+    <div class="error-msg" *ngIf="EmployeeForm.get('NAME')?.hasError('required') && EmployeeForm.get('NAME')?.touched">
+      Employee Name is required </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Enter Email:</label>
+    <input type="email" class="form-control"formControlName="EMAIL" placeholder="name@example.com">
+    <div class="error-msg" *ngIf="EmployeeForm.get('EMAIL')?.hasError('required') && EmployeeForm.get('EMAIL')?.touched">
+      Employee EMAIL is required </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">MOBILE:</label>
+    <input type="number" class="form-control"formControlName="MOBILE" placeholder="MOBILE +91">
+    <div class="error-msg" *ngIf="EmployeeForm.get('MOBILE')?.hasError('required') && EmployeeForm.get('MOBILE')?.touched">
+      Employee MOBILE is required </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">EmployeeActivateDate:</label>
+    <input type="date" class="form-control"formControlName="EmployeeActivateDate" placeholder="EmployeeActivateDate">
+    <div class="error-msg" *ngIf="EmployeeForm.get('EmployeeActivateDate')?.hasError('required') && EmployeeForm.get('EmployeeActivateDate')?.touched">
+      Employee EmployeeActivateDate is required </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"> EmployeeDOB:</label>
+    <input type="date" class="form-control" formControlName="EmployeeDOB" placeholder="Employee Date of Birth">
+    <div class="error-msg" *ngIf="EmployeeForm.get('EmployeeDOB')?.hasError('required') && EmployeeForm.get('EmployeeDOB')?.touched">
+      Employee Date of Birth is required </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"> Employee TaskId:</label>
+    <input type="number" class="form-control"formControlName="TaskId" placeholder="Your TaskId">
+    <div class="error-msg" *ngIf="EmployeeForm.get('TaskId')?.hasError('required') && EmployeeForm.get('TaskId')?.touched">
+      Employee TaskId is required </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"> Employee TaskStartDate:</label>
+    <input type="date" class="form-control" formControlName="TaskStartDate" placeholder="Your TaskStartDate">
+    <div class="error-msg" *ngIf="EmployeeForm.get('TaskStartDate')?.hasError('required') && EmployeeForm.get('TaskStartDate')?.touched">
+      Employee Task Start Date is required </div>
+  </div>
+ 
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"> Employee TaskEndDate:</label>
+    <input type="date" class="form-control" formControlName="TaskEndDate" placeholder="Your TaskEndDate">
+    <div class="error-msg" *ngIf="EmployeeForm.get('TaskEndDate')?.hasError('required') && EmployeeForm.get('TaskEndDate')?.touched">
+      Employee Task End Date is required </div>
+  </div>
+ <div class="text-center">
+  <button class="btn btn-lg btn-success" type="submit">submit</button>
+
+ </div>
+</div>
+</form>
