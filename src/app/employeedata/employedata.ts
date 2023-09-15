@@ -69,5 +69,17 @@ export const dummyEmployeeData: any = [
         TaskStartDate: new Date(2024, 12, 15),
         TaskEndDate: new Date(2021, 10, 30),
     },
+    {
+        ID: 6,
+        NAME: 'john doe',
+        EMAIL: 'johndo@gmail.com',
+        MOBILE: '765313546',
+        EmployeeActivateDate: new Date(2025, 2, 15),
+        EmployeeDOB: new Date(1997, 8, 10),
+        TaskId: 106,
+        TaskStartDate: new Date(2024, 12, 15),
+        TaskEndDate: new Date(2021, 10, 30),
+    }
+ 
  
 ];
